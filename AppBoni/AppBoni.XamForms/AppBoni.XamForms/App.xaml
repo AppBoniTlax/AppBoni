@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:AppBoni.XamForms.Infrastructure"
+             x:Class="AppBoni.XamForms.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--locator-->
+            <infra:InstanceLocator x:Key="Locator"/>
+
+
+            <!--colores-->
+            <Color x:Key="maincolormenu">#F15A24</Color>
+            <Color x:Key="MainColor">#595959</Color>
+            <Color x:Key="menuu">#F15A24</Color>
+            <Color x:Key="FontColor">#f6f6f6</Color>
+            <Color x:Key="AccentColor1">#D65A24</Color>
+            <Color x:Key="AccentColor2">#C01622</Color>
+            <Color x:Key="BackgroundColor">#B54424</Color>
+
+            <!--<Color x:Key="rojo">#f15a24</Color>-->
+            <!--parameters-->
+
+            <Style x:Key="parrafo" TargetType="Label">
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="TextColor" Value="#595959"></Setter>
+                <Setter Property="TextDecorations" Value="None"></Setter>
+
+            </Style>
+
+            <Style x:Key="titulo" TargetType="Label">
+                <Setter Property="FontSize" Value="22"></Setter>
+                <Setter Property="TextColor" Value="#F15A24"></Setter>
+                <Setter Property="FontFamily" Value="bold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+              
+            </Style>
+
+
+            <Style x:Key="subtitulo" TargetType="Label">
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="TextColor" Value="#F15A24"></Setter>
+                <Setter Property="FontFamily" Value="bold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+
+            </Style>
+
+            <Style x:Key="subtituloo" TargetType="Label">
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="TextColor" Value="#F15A24"></Setter>
+                <Setter Property="FontFamily" Value="bold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+
+            </Style>
+
+            <Style x:Key="subtitulooo" TargetType="Label">
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="TextColor" Value="#F15A24"></Setter>
+                <Setter Property="FontFamily" Value="bold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+
+            </Style>
+
+
+            <Style x:Key="boni" TargetType="Label">
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="TextColor" Value="#595959"></Setter>
+                <Setter Property="FontFamily" Value="bold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+
+            </Style>
+
+            <Style x:Key="directori" TargetType="Label">
+                <Setter Property="FontSize" Value="18"></Setter>
+                <Setter Property="TextColor" Value="#F15A24"></Setter>
+                <Setter Property="FontFamily" Value="bold"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+
+            </Style>
+
+            <Style x:Key="informacion" TargetType="Label">
+                <Setter Property="FontSize" Value="14"></Setter>
+                <Setter Property="TextColor" Value="#87CEFA"></Setter>
+                <Setter Property="FontAttributes" Value="None"></Setter>
+              
+            </Style>
+
+            <Style x:Key="boton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#fff"></Setter>
+                <Setter Property="TextColor" Value="#595959"></Setter>
+                <Setter Property="BorderColor" Value="#EDEDED"></Setter>
+            </Style>
+
+             <x:String x:Key="UrlApi">http://62375a96.ngrok.io </x:String>
+            <!--<x:String x:Key="UrlApi">http://18.224.47.68:85</x:String>-->
+            <x:String x:Key="TiempoPush">48</x:String>
+            <x:String x:Key="TiempoNotification">5</x:String>
+            <x:String x:Key="ShortText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam eget felis eget nunc lobortis.</x:String>
+            <x:String x:Key="PrivacyAdvice">Como parte de la ejecución del Proyecto “Apoyando el cumplimiento de los Objetivos de Desarrollo Sostenible en México por medio de prácticas de Go-bierno Abierto, Participación Ciudadana y el Fortalecimiento de la Transpa-rencia”, se gestó la iniciativa “Gobierno Abierto desde lo local para el Desa-rrollo Sostenible”, coordinada por el Programa de las Naciones Unidas para el Desarrollo (PNUD) en México con la colaboración del Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI), gracias a la cooperación de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID), e implementada en colaboración con el Grupo de Trabajo (GT) integrado además por las organizaciones GESOC A.C., ProSociedad y Gobierno Fácil.</x:String>
+            <x:String x:Key="PrivacyAdvice2">En el marco de esta iniciativa, se implementó el “Programa de Formación en Gobierno Abierto y Desarrollo Sostenible 2017-2018” desarrollado por el GT, del que se graduaron 55 Agentes Locales de Cambio, ciudadanas y ciu-dadanos de 15 estados de la República que recibieron capacitación y forta-lecimiento en materia de gobierno abierto y desarrollo sostenible, con enfo-que de género y derechos humanos. Como parte de la estrategia de acele-ración de esta iniciativa, se incubaron seis proyectos diseñados e implemen-tados por las y los Agentes Locales de Cambio en los estados de Tlaxcala, Quintana Roo, Campeche, Chihuahua, Oaxaca y Veracruz.</x:String>
+            <x:String x:Key="PrivacyAdvice3">El Proyecto diseñado por las y los Agentes Locales de Cambio de Tlaxcala se titula “Botón de Pánico (BONI) para disminuir la violencia de género contra mujeres y niñas”. Su objetivo principal es visibilizar y reducir la vio-lencia contra las mujeres en el Estado de Tlaxcala a partir de la puesta en marcha de la aplicación digital BONI. Esta herramienta es una app cívica de fácil descarga y uso, para que mujeres y niñas puedan alertar a las autori-dades y recibir auxilio en caso de percibir que se encuentran en una situa-ción de peligro. Los créditos del diseño de este proyecto corresponden a las y los Agentes Locales del Estado de Tlaxcala: la C. Atenas Hernández Sán-chez, el C. Antonio Atempa Tuxpan, el C. Julio Barranco Acosta y la C. Veró-nica Gallegos Gómez.Posterior a la entrega de la aplicación BONI, por parte del PNUD México al Gobierno de Tlaxcala, por medio del acuerdo celebrado el 10 de Septiembre del 2019, la aplicación informática para el uso del Botón de Pánico BONI en dispositivos móviles Android e iOS, es un proyecto que el Gobierno del Estado de Tlaxcala, a través del Centro de Control, Comando, Comunicación y Cómputo (en adelante C4), dependiente de la Comisión Ejecutiva del Sis-tema Estatal de Seguridad Pública (CESESP), implementa y opera para faci-litar a la población una herramienta con la cual solicitar auxilio en caso de presentarse una emergencia o acto de violencia de género que atente contra la vulnerabilidad de mujeres y niñas.</x:String>
+            <x:String x:Key="PrivacyAdvice4">Para utilizar adecuadamente esta aplicación o cualquier dato o información al que se acceda a través de los diferentes medios de transmisión de datos que se ofrecen, es necesario que usted lea cuidadosamente los presentes Términos y Condiciones de Uso.</x:String>
+            <x:String x:Key="PrivacyAdvice5">Usted podrá descargar desde su equipo móvil Android o iOS, la aplicación Botón de Pánico, BONI Tlaxcala. Descargando el aplicativo en su dispositivo móvil se ejecutará la aplicación. La descarga y registro de la aplicación im-plica que usted confirma que ha leído, entendido y aceptado los presentes Términos y Condiciones de Uso. Usted sólo podrá usar la aplicación de acuerdo con los Términos y Condiciones de Uso que se consignan en este documento.</x:String>
+            <x:String x:Key="PrivacyAdvice6">Para proporcionar el servicio de la aplicación Botón de Pánico, BONI Tlax-cala, el Centro de Atención de Llamadas de Emergencia (CALLE) del estado de Tlaxcala deberá utilizar información basada en la localización de su dis-positivo móvil, mediante tecnología de Sistema de Posicionamiento Global (Global Position System) GPS en aquellas ubicaciones en las que dicha co-bertura esté disponible. Para realizar esta operación resulta necesario reca-bar, utilizar, transmitir, tratar y almacenar los datos generales y geográficos de usted, incluyendo de manera enunciativa más no limitativa, la localiza-ción geográfica de su dispositivo, así como información relativa a su nombre, apellido paterno, correo electrónico, número telefónico de su dispo-sitivo, y algunos datos médicos y de salud. Por este motivo, aceptando los términos y condiciones aquí descritos otorga su consentimiento para el uso y tratamiento de los datos anteriormente referidos y para que el servicio de atención de la aplicación lleve a cabo las actividades operativas necesarias para prestar el servicio de emergencia y de atención a la presunta víctima mediante esta aplicación.</x:String>
+            <x:String x:Key="PrivacyAdvice7">La emisión de alerta por medio del Botón de Pánico (BONI) le permite com-partir su ubicación con un número limitado personas registradas por usted como contactos de emergencia, a través de sus dispositivos móviles una vez aceptadas las solicitudes enviadas, por lo que desde este momento usted autoriza transmitir dicha información, con la única finalidad de que dichos contactos tengan conocimiento del requerimiento que esté realizando por medio del Botón de Pánico BONI, a quien se le transmitirá los datos que usted registre.</x:String>
+            <x:String x:Key="PrivacyAdvice8">Usted asume la responsabilidad de todas las acciones que ejecute para la instalación y registro de esta aplicación, mismas que realiza por su cuenta y riesgo. Usted no utilizará ni permitirá que otros utilicen esta aplicación o cualquier servicio prestado a través de esta de forma contraria a las dispo-siciones de estos Términos y Condiciones de Uso. Es responsabilidad de usted todo acto que realice con esta aplicación; asimismo, se responsabiliza del cuidado y custodia del dispositivo móvil registrado, así como de las claves o contraseñas de uso para que esta aplicación únicamente sea utili-zada para solicitar el auxilio de las autoridades competentes, de las entida-des federativas o municipales en caso de una emergencia, por lo que cual-quier mal uso que se realice de esta aplicación desde su dispositivo móvil, se presumirá responsabilidad de la persona usuaria.</x:String>
+            <x:String x:Key="PrivacyAdvice9">Mediante la aceptación en la instalación de la presente aplicación, usted re-conoce y acepta que los prestadores de los servicios de emergencia quedan liberados de toda responsabilidad por el mal uso que llegara a realizarse de esta aplicación desde su dispositivo móvil, así como de las claves o contra-señas utilizadas para dicho fin. Asimismo, los prestadores de servicios de emergencia no serán responsables por el acceso autorizado o no autorizado a la información sobre la ubicación geográfica de su dispositivo móvil.</x:String>
+            <x:String x:Key="PrivacyAdvice10">Se hace de su conocimiento que la aplicación se encuentra en constante de-sarrollo tecnológico, por lo que esta aplicación es falible y está en proceso permanente de mejora, por lo que cabe la posibilidad, aun cuando reducida, de que ocurran fallas técnicas durante su uso, por lo que no se garantiza que la aplicación esté libre de errores; por tal motivo, para el caso de que ocurriera cualquier eventualidad derivada del uso de la aplicación aun to-mando todas las previsiones necesarias por parte del proveedor, éste se deslinda de cualquier daño o perjuicio ocasionado que pudiera presentarse.</x:String>
+            <x:String x:Key="PrivacyAdvice11">Los prestadores de servicios del botón de pánico BONI de los que depende la aplicación, no asumen ninguna responsabilidad por los inconvenientes que usted tuviera con el equipo hardware y/o software utilizados para co-nectarse a esta aplicación, por lo que no será responsable de las fallas que se presenten, ni de la incorrección o imprecisión en la información generada por los mismos, o bien de los sistemas de mapas y contenidos geográficos. En ningún caso, el PNUD en México, las autoridades de los tres órdenes de gobierno e incluso los particulares prestadores de servicios, serán responsa-bles por las consecuencias del uso indebido o fraudulento de la aplicación, cualquiera que sea la causa del eventual daño.</x:String>
+            <x:String x:Key="PrivacyAdvice12">En caso de que su dispositivo móvil Android o iOS esté fuera de la zona de cobertura y/o sin acceso a una red inalámbrica Wi Fi, la funcionalidad de la aplicación se podrá utilizar una vez que se regrese al área de cobertura o se cuente con red inalámbrica, por lo que la autoridad del lugar en donde se encuentre su dispositivo móvil en ese supuesto, no será responsable por ningún daño o perjuicio que pudiera ocasionarle no contar con la señal de red necesaria para el uso de la aplicación, asumiendo usted toda responsa-bilidad derivada de tal circunstancia. Cualquier material autorizado (Ej. Sof-tware) que pueda ser descargado desde sitios externos, tiendas en línea de Android e iOS está controlado exclusivamente por términos de licencia que acompaña al documento o por acuerdos de términos de licencia que acom-pañan al material original. Cuando usted actualiza o descarga dichos mate-riales protegidos, está de acuerdo en cumplir con los términos de licencias, por lo que el PNUD en México, las instituciones que conforman el GT, y/o el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública no serán responsables de las consecuencias de la descarga de dichos materiales. Cualquier reproducción o pre-distribución de los materiales que constituyen el software de esta aplicación y que no sigan en estricto apego los objetivos con los que fue construida la aplicación digital BONI, está prohibido por la ley.</x:String>
+            <x:String x:Key="PrivacyAdvice13">El prestador del servicio tiene el derecho de realizar modificaciones en los diferentes medios de transmisión de datos que se ofrecen para los dispositi-vos Android e iOS, ya sean temporales o permanentes en cualquier momen-to; por lo tanto, no se garantiza la disponibilidad, ni la continuidad del fun-cionamiento de la aplicación en todo momento y/o durante el tiempo de ac-tualización. Ni el administrador ni las instituciones nombradas en estos tér-minos y condiciones asumen responsabilidad alguna por cualquier falla que pudiera presentarse con el uso de esta aplicación, ya sea por cambios y/o actualizaciones o por alguna otra causa. Cualquier material descargado u obtenido a través de las distintas plataformas del mercado de aplicaciones es bajo su responsabilidad y riesgo. El prestador del servicio del lugar en donde se encuentre ubicado el dispositivo móvil, se reserva el derecho de modificar, restringir o suprimir todos o cualquiera de los atributos de esta aplicación, en forma temporal o definitiva, sin que estas medidas puedan ser objeto de requerimiento alguno, ni de derecho a reclamar daños o per-juicios por parte de las personas usuarias.</x:String>
+            <x:String x:Key="PrivacyAdvice14">Usted no podrá utilizar los servicios que ofrece BONI de ningún modo que puedan dañar, inhabilitar, sobrecargar o afectar la aplicación o cualquier servicio del sistema del Botón de Pánico, ni interferir en el uso y disfrute de la aplicación o de los servicios por parte de terceros. Usted no podrá acce-der o tratar de acceder a las cuentas, sistemas o redes informáticas de los gobiernos federal, estatal o municipal de donde acceda su dispositivo móvil, por ningún medio, ni extraer contraseñas u otros medios informáticos. Usted no podrá obtener o intentar obtener materiales o información sensi-ble y/o datos personales por medios disponibles, ni dolosa ni accidental-mente a través de esta aplicación. Usted tiene prohibido situar o transmitir desde los diferentes medios de transmisión de datos que ofrece la aplica-ción Botón de Pánico BONI, cualquier material, amenaza, calumnia, difama-ción, obscenidad o cualquiera otra que pueda generar una responsabilidad de tipo civil, penal o cualquier otra establecida en las leyes aplicables. Usted no podrá utilizar esta aplicación para asuntos relacionados con difamar, abusar, acosar, acechar, amenazar o violar de cualquier otro modo los dere-chos de otras personas, incluido el derecho de privacidad. Queda prohibido cargar, publicar, transmitir o exponer de cualquier otro modo contenido con virus u otros códigos informáticos, archivos o programas diseñados para in-terrumpir, destruir o limitar la funcionalidad de cualquier software o hard-ware informático o equipo de telecomunicaciones, tales como troyanos, gu-sanos, bombas de tiempo, o archivos corruptos, entre otros, que puedan afectar el uso de la aplicación Botón de Pánico BONI. Usted no podrá enviar, publicar, modificar, transmitir, reproducir o distribuir por cualquier forma o medio, información, software u otros materiales o herramientas que comprometan la funcionalidad de esta aplicación o la seguridad de los inte-grantes del Consejo Estatal de Seguridad Pública. Usted no podrá violar los códigos de conducta u otras directivas aplicables a cualquier servicio de co-municación.</x:String>
+            <x:String x:Key="PrivacyAdvice15">Usted no podrá utilizar la información que obtenga con el uso de esta apli-cación, para fines ilícitos o contrarios a lo establecido en los presentes Tér-minos y Condiciones de Uso. Usted no podrá enviar textos que representen una falsa alerta de emergencia: todo abuso será consignado y enterado a la autoridad correspondiente con fuero y jurisdicción del lugar en donde haya accedido a través de la aplicación Botón de Pánico BONI.</x:String>
+            <x:String x:Key="PrivacyAdvice16">Usted está de acuerdo en mantener la información derivada de esta aplica-ción, como confidencial y utilizarla únicamente para el propósito para la cual fue creada y que le son autorizados.</x:String>
+            <x:String x:Key="PrivacyAdvice17">La información generada por el uso de esta aplicación se proporciona con licencia para su uso personal e intransferible. Queda prohibido el uso de esta aplicación para fines comerciales o empresariales ya sea en beneficio propio o de un tercero. Usted no podrá modificar, copiar, distribuir, transmi-tir, exhibir, representar, reproducir, publicar, transferir o vender cualquier in-formación, software, producto o servicio obtenido a través de esta aplica-ción, como tampoco podrá otorgar licencias o crear trabajos relacionados con los mismos.</x:String>
+            <x:String x:Key="PrivacyAdvice18">Se hace constar que el PNUD México, en su capacidad como Coordinador del Proyecto “Apoyando el cumplimiento de los Objetivos de Desarrollo Sos-tenible en México por medio de prácticas de Gobierno Abierto, Participación Ciudadana y el Fortalecimiento de la Transparencia”, se reserva el derecho a la reproducción total o parcial del código abierto de la aplicación BONI, así como de sus materiales para su réplica en otras entidades federativas, asignando los créditos correspondientes a las instituciones integrantes del GT, así como a las y los Agentes Locales de Cambio del Estado de Tlaxcala quienes promovieron la iniciativa y el diseño de la aplicación digital BONI, la C. Atenas Hernández Sánchez, el C. Antonio Atempa Tuxpan, el C. Julio Ba-rranco Acosta y la C. Verónica Gallegos Gómez.</x:String>
+            <x:String x:Key="PrivacyAdvice19">De conformidad con el marco legal y los Convenios y Acuerdos suscritos entre el Gobierno de México y el PNUD: “Los derechos de patentes, los dere-chos de autor y otros derechos similares de descubrimientos o trabajos que resulten de la asistencia del PNUD pertenecen al PNUD”.</x:String>
+            <x:String x:Key="PrivacyAdvice20">Derechos Reservados © 2019. Programa de las Naciones Unidas para el Desarrollo (PNUD).</x:String>
+            <x:String x:Key="PrivacyAdvice21">Todos los derechos están reservados. Ni este producto ni partes de éste pueden ser reproducidos, almacenados mediante cualquier sistema o trans-mitidos, en cualquier forma o por cualquier medio, sea éste electrónico, me-cánico, de fotocopiado, de grabado o de otro tipo, sin el permiso previo del Programa de las Naciones Unidas para el Desarrollo.</x:String>
+            <x:String x:Key="PrivacyAdvice22">En atención a lo anterior y en acuerdo con la Secretaría de Gobierno (SEGOB) del Estado de Tlaxcala, el PNUD en México, por medio del Acta En-trega-Recepción celebrada entre las partes el 10 de Septiembre del 2019, otorga el derecho al uso y administración de la aplicación digital BONI dentro de los límites territoriales que enmarcan la división política del Estado de Tlaxcala, libre de toda regalía o de cualquier costo de naturaleza similar a SEGOB Tlaxcala, la Comisión Ejecutiva del Sistema Estatal de Se-guridad Pública (CESESP Tlaxcala) y el Instituto Estatal de la Mujer (Tlaxca-la).</x:String>
+            <x:String x:Key="PrivacyAdvice23">Esta aplicación digital fue posible gracias al apoyo del pueblo de los Esta-dos Unidos, a través de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID). El contenido de esta aplicación digital es responsabi-lidad del Proyecto “Apoyando el cumplimiento de los Objetivos de Desarro-llo Sostenible en México por medio de prácticas de gobierno abierto, partici-pación ciudadana y el fortalecimiento de la transparencia” y no necesaria-mente refleja el punto de vista de USAID o del gobierno de los Estados Unidos; ni del Programa de las Naciones Unidas para el Desarrollo, de su Junta Directiva, ni de sus Estados Miembros.</x:String>
+            <x:String x:Key="PrivacyAdvice24">El contenido de este material se produjo en coordinación con el Grupo de Trabajo (GT) del Proyecto, sin embargo, no refleja necesariamente las opi-niones institucionales de los integrantes del GT (PNUD, INAI, GESOC A.C., Gobierno Fácil, ProSociedad).</x:String>
+            <x:String x:Key="PrivacyAdvice25">El uso de la aplicación Botón de Pánico BONI, no lo convierte a usted en ti-tular de ninguno de los derechos de propiedad intelectual de la misma, ni del contenido o información a la que acceda. Queda prohibido a usted utili-zar el nombre, la marca o el logotipo de esta aplicación, ni del Gobierno Fe-deral, Estatal o Municipal del lugar en donde se encuentre. Asimismo, no podrá eliminar, ocultar, ni alterar los avisos legales que se muestren en la misma.</x:String>
+            <x:String x:Key="PrivacyAdvice26">Montes Urales Nº 440, Lomas de Chapultepec, Ciudad de México, C.P. 11000 | Tel: (5255) 4000 9701 | Fax: (5255) 5255 0095 www.mx.undp.org | Facebook: PNUDMexico | Twitter: @pnud_mexico</x:String>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

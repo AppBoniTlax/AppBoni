@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="AppBoni.XamForms.Views.AttackPreventionPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding MyProfile}">
+            <StackLayout
+                Padding="20">
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Margin="0,0,0,20">
+                    <Image Source="alerta" WidthRequest="50"></Image>
+
+                    <Label  VerticalOptions="Center"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource titulo}" Text="Prevención de Ataque" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="1. ¿Consideras que tu registro en la aplicación fue sencillo?"
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <input:SelectionView  
+                            ColumnNumber="1" 
+                            Grid.Row="1" 
+                            HorizontalOptions="Start"
+                            ItemsSource="{Binding MyList}"
+                            SelectedItem="{Binding SelectedItem1}" 
+                            SelectionType="RadioButton"/>
+
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="2. ¿Consideras que la forma de emitir la alerta desde su dispositivo móvil es práctica y sencilla para cualquier usuario?"
+                        VerticalOptions="Center">
+                    </Label>
+                    <input:SelectionView  
+                        ColumnNumber="1" 
+                        Grid.Row="3" 
+                        HorizontalOptions="Start"
+                        ItemsSource="{Binding MyList}"
+                        SelectedItem="{Binding SelectedItem3}" 
+                        SelectionType="RadioButton"/>
+
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="3. Después de activar la alerta, ¿Su caso fue atendido?"
+                        VerticalOptions="Center">
+                    </Label>
+                    <input:SelectionView 
+                        ColumnNumber="1"
+                        Grid.Row="5"  
+                        HorizontalOptions="Start"
+                        ItemsSource="{Binding MyList}"
+                        SelectedItem="{Binding SelectedItem5}" 
+                        SelectionType="RadioButton"/>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="4. A partir de emitir la alerta recibió atención por parte de las autoridades"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        ItemDisplayBinding="{Binding Name}"
+                        SelectedItem="{Binding Authority}"
+                        ItemsSource="{Binding Authorities}"
+                        Title="Selecciona una Opción">
+                    </Picker>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="5. ¿Presentó una denuncia especificando el tipo de violencia a la que fue sujeta?"
+                        VerticalOptions="Center">
+                    </Label>
+                    <input:SelectionView  
+                        ColumnNumber="1"  
+                        Grid.Row="9" 
+                        HorizontalOptions="Start"
+                        ItemsSource="{Binding MyList}"
+                        SelectedItem="{Binding SelectedItem9}" 
+                        SelectionType="RadioButton"/>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="10"
+                         Text="6. ¿Recibió un trato adecuado a partir de su denuncia?"
+                        VerticalOptions="Center">
+                    </Label>
+                    <input:SelectionView  
+                        ColumnNumber="1"
+                        Grid.Row="11"   HorizontalOptions="Start"
+                        ItemsSource="{Binding MyList}"
+                        SelectedItem="{Binding SelectedItem11}" 
+                        SelectionType="RadioButton"/>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="12"
+                        Text="7. El tipo de agresor/es fue"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="0"
+                        Grid.Row="13"
+                        ItemDisplayBinding="{Binding Name}"
+                        SelectedItem="{Binding Aggressor}"
+                        ItemsSource="{Binding Aggressors}"
+                        Title="Selecciona una Opción">
+                    </Picker>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="14"
+                        Text="8. ¿Fue objeto de violencia de género a manos de personas que no son su pareja?"
+                        VerticalOptions="Center">
+                    </Label>
+                    <input:SelectionView 
+                        ColumnNumber="1" 
+                        Grid.Row="15"  
+                        HorizontalOptions="Start"
+                        ItemsSource="{Binding MyList}"
+                        SelectedItem="{Binding SelectedItem15}" 
+                        SelectionType="RadioButton"/>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="16"
+                        Text="9. ¿Qué otra información considera que puede contribuir a la mejora de la app BONI?"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Editor 
+                        Grid.Row="17"  
+                        Keyboard="Chat"
+                        VerticalOptions="FillAndExpand" 
+                        Text="{Binding Observations}"/>
+
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderRadius="0"
+                    Command="{Binding SaveSurveyInfoCommand}"
+                    HeightRequest="46"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="Enviar"
+                    TextColor="White">
+                </Button>
+                <Button
+                    BackgroundColor="Red"
+                    BorderRadius="0"
+                    Command="{Binding CancelSurveyInfoCommand}"
+                    HeightRequest="46"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="Cancelar"
+                    TextColor="White">
+                </Button>
+                <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                </Label>
+                <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

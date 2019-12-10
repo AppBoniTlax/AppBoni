@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.GeneralInfoPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+            >
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding  MyProfile}">
+            <StackLayout
+                Padding="20">
+                <!--Imagen-->
+                <!--<Image
+                  WidthRequest="90"
+                  HeightRequest="90"
+                  Source="logo">
+                </Image>-->
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Margin="0,0,0,20">
+                    <Image Source="generales" WidthRequest="50"></Image>
+                    <Label  VerticalOptions="Center"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span  Style="{StaticResource titulo}" Text="Datos Generales" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Nombre Completo *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="{Binding FirstName}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Apellido Paterno *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="{Binding LastName}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="Apellido Materno *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="{Binding SecondLastName}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Curp *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="{Binding Curp}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Fecha de Nacimiento *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <DatePicker
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Format="d"
+                        Date="{Binding Birthday, Mode=TwoWay}"
+                        >
+                    </DatePicker>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="10"
+                        Text="Teléfono *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="11"
+                        Text="{Binding PhoneNumber}"
+                        IsReadOnly="True"
+                        >
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="12"
+                        Text="Correo Electrónico *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="13"
+                        Text="{Binding Email}"
+                        Keyboard="Email">
+                    </Entry>
+
+
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderRadius="0"
+                    Command="{Binding SaveGeneralInfoCommand}"
+                    HeightRequest="46"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="Guardar"
+                    TextColor="White">
+                </Button>
+
+                <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                </Label>
+                <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.MenuPage"
+             xmlns:infra="clr-namespace:AppBoni.XamForms.Infrastructure"
+             BackgroundColor="{StaticResource maincolormenu}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Menú"
+             IconImageSource="ic_menu">
+    <ContentPage.Content >
+        <StackLayout Padding="10" 
+                     BackgroundColor="{StaticResource maincolormenu}">
+
+            <ListView 
+            
+                ItemsSource="{Binding Menus}"
+                HasUnevenRows="True"
+                SeparatorVisibility="None" BackgroundColor="#F15A24">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid >
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectMenuCommand}"></TapGestureRecognizer>
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image
+                                    Grid.Column="0"
+                                    HeightRequest="50"
+                                    Source="{Binding Icon}"
+                                    WidthRequest="50">
+                                </Image>
+                                <Label
+                                    Grid.Column="0"
+                                    FontAttributes="None"
+                                    VerticalOptions="Start"
+                                    TextColor="#fff"
+                                    FontSize="20"
+                                    Margin="0,30,0,0"
+                                    Text="{Binding Title}">
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#fff" VerticalOptions="Start" Margin="0,20,0,0">
+
+            </Label>
+            <Label Text="Programa de las Naciones" FontSize="13"  TextColor="#fff" VerticalOptions="Start" >
+
+            </Label>
+            <Label Text=" Unidas para el Desarrollo (PNUD)" FontSize="13"  TextColor="#fff" VerticalOptions="Start" >
+
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

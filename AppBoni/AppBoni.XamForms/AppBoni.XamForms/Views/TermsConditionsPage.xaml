@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.TermsConditionsPage"   BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Register}">
+            <StackLayout
+                Padding="20">
+                <!--Imagen-->
+                <Image
+               WidthRequest="90"
+               Margin="0,0,0,30"
+                 Source="logo">
+                </Image>
+                <!--<StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="aviso.png" WidthRequest="50"></Image>
+                    <Label  VerticalOptions="Center"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource titulo}" Text="TÉRMINO Y CONDICIONES DE USO" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>-->
+                <Image Source="terminos1"></Image>
+
+                <StackLayout HorizontalOptions="Center"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="TÉRMINOS Y CONDICIONES DE USO" TextColor="#646363" FontSize="16" FontAttributes="Bold" ></Label>
+                                       
+                    
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center"
+                    Orientation="Horizontal" >
+                <Label Text="APLICACIÓN DIGITAL BONI (Botón de Pánico)" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+                
+                            
+                <StackLayout HorizontalOptions="Center"
+                    Orientation="Horizontal" Padding="10">
+                    <Label Text="ACERCA DEL DESARROLLO DE LA APLICACIÓN DIGITAL BONI" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label> 
+
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice2}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice3}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text="ACEPTACIÓN DE LOS TÉRMINOS" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice4}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice5}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text="GEOLOCALIZACIÓN" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice6}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice7}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text="RESPONSABILIDAD SOBRE USO DE LA APLICACIÓN BONI" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice8}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice9}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice10}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice11}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice12}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text="CAMBIOS Y ACTUALIZACIONES DEL SERVICIO" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice13}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text=" USO DE LA APLICACIÓN BONI" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice14}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice15}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text=" CONFIDENCIALIDAD" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice16}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text=" USO PERSONAL Y NO COMERCIAL" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice17}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                     <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" >
+                    <Label Text=" DERECHOS DE PROPIEDAD INTELECTUAL" TextColor="#646363" FontSize="14" FontAttributes="Bold" ></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice18}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice19}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice20}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice21}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice22}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice23}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice24}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice25}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Center"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="PNUD MÉXICO" TextColor="#646363" FontSize="16" FontAttributes="Bold" ></Label>
+
+
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Padding="10">
+
+                    <Label Text="{StaticResource PrivacyAdvice26}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50"></Label>
+                </StackLayout>
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--<Label  Grid.ColumnSpan="2"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                        Text="{StaticResource PrivacyAdvice}"
+                           LineBreakMode="CharacterWrap"
+                           MaxLines="50" />-->
+
+        
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="He leído y Acepto"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch IsToggled="{Binding IsAccepted, Mode=TwoWay}"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            />
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderRadius="0"
+                    Command="{Binding RegisterUserCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsAccepted}"
+                    Text="Aceptar"
+                    TextColor="White">
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

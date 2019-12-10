@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.RegisterFourthPage" 
+       BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Register}">
+            <StackLayout
+                Padding="20">
+
+                <Image
+               WidthRequest="90"
+               Margin="0,0,0,30"
+                 Source="logo">
+                </Image>
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="contacto.png" WidthRequest="50"></Image>
+                    <Label  VerticalOptions="Center" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource titulo}" Text="REGISTRO CONTACTO" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Nombre Completo *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        MaxLength="20"
+                        Text="{Binding FirstNameContact}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Apellido Paterno *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        MaxLength="20"
+                        Text="{Binding LastNameContact}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="Apellido Materno *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        MaxLength="20"
+                        Text="{Binding SecondLastNameContact}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Teléfono *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Keyboard="Telephone"
+                        Text="{Binding PhoneContact}"
+                        MaxLength="10">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Parentesco *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        ItemDisplayBinding="{Binding Description}"
+                        SelectedItem="{Binding Relation}"
+                        ItemsSource="{Binding Relations}"
+                        Title="Seleccione el Parentesco">
+                    </Picker>
+
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="10"
+                        Text="Dirección (Calle, Colonia, Número,
+Localidad / Municipio) *"
+                        VerticalOptions="Center">
+                    </Label>
+                
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="11"
+                        Text="{Binding AddressContact}">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderRadius="0"
+                    Command="{Binding RegisterPageFourthCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Siguiente"
+                    TextColor="White">
+                </Button>
+                <Label Text="* Estos campos son obligatorios.
+Su código de validación llegará a su número telefónico." VerticalOptions="Start"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

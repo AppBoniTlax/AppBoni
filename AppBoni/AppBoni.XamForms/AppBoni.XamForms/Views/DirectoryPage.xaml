@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.DirectoryPage" 
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Directorio">
+   <ListView ItemsSource="{Binding Numbers}"
+             HasUnevenRows="True">
+       <ListView.ItemTemplate>
+           <DataTemplate>
+               <ViewCell>
+                   <Grid Padding="8">
+                       <Grid.GestureRecognizers>
+                           <TapGestureRecognizer Command="{Binding SelectPhoneCommand}"></TapGestureRecognizer>
+                       </Grid.GestureRecognizers>
+                       <Grid.ColumnDefinitions>
+                           <ColumnDefinition Width="Auto"></ColumnDefinition>
+                           <ColumnDefinition Width="*"></ColumnDefinition>
+                       </Grid.ColumnDefinitions>
+                      <!--<Image WidthRequest="50" HeightRequest="50" VerticalOptions="Start"
+                           Source="logo"></Image>-->
+                       <StackLayout Grid.Column="1" 
+                                    Orientation="Vertical">
+                           <Label 
+                                
+                               Text="{Binding Title}" Style="{StaticResource parrafo}" ></Label>
+                            <Label Text="{Binding Name}" Style="{StaticResource directori}"
+                                  ></Label>
+                       </StackLayout>
+                   </Grid>
+               </ViewCell>
+           </DataTemplate>
+       </ListView.ItemTemplate>
+
+   </ListView>
+</ContentPage>

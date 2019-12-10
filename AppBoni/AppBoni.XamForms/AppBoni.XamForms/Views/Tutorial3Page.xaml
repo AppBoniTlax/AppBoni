@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.Tutorial3Page"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding Tutorial}" Padding="30,0,30,0">
+            <!--<Label Text="Pantalla Tutorial 3"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+
+            <Image Source="tutorial3" WidthRequest="300" Margin="0,90,0,50"></Image>
+
+            <Button BackgroundColor="#595959" BorderRadius="0"
+                    Text="Siguiente" TextColor="White" Command="{Binding GoToPageFourCommand}">
+            </Button>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

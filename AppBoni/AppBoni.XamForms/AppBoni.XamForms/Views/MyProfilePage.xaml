@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.MyProfilePage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <ContentPage.Content>
+        <ScrollView  BindingContext="{Binding MyProfile}">
+            <StackLayout Padding="20">
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Margin="0,0,0,20">
+                    <Image Source="datos.png" WidthRequest="50"></Image>
+                    
+                    
+                    <Label  HorizontalOptions="CenterAndExpand"
+                        Margin="5,10,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span  Style="{StaticResource titulo}" Text="Mi Perfil" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </StackLayout>
+                
+                
+
+                <Button Style="{StaticResource boton}" Text="Datos Generales" 
+                     HeightRequest="50"
+                     VerticalOptions="Center" 
+                         BorderWidth="1"
+                         BorderRadius="8"
+                        Margin="0,0,0,20"
+                        ImageSource="icogenerales"
+                     Command="{Binding GeneralInfoCommand}"
+                        />
+
+                <Button Style="{StaticResource boton}" Text="Datos de Domicilio" 
+                    HeightRequest="50"
+                        ImageSource="datosubicacion"
+                    VerticalOptions="Center"
+                         BorderWidth="1"
+                         BorderRadius="8"
+                        Margin="0,0,0,20"
+                     Command="{Binding AddressInfoCommand}"/>
+
+                <Button Style="{StaticResource boton}" Text="Datos de Médicos" 
+                    HeightRequest="50"
+                        ImageSource="datosmedicos"
+                    VerticalOptions="Center" 
+                         BorderWidth="1"
+                         BorderRadius="8"
+                        Margin="0,0,0,20"
+                    Command="{Binding MedicalInfoCommand}"/>
+
+                <Button Style="{StaticResource boton}" Text="Mis Contactos" 
+                    HeightRequest="50"
+                        ImageSource="miscontactos"
+                    VerticalOptions="Center"
+                         BorderWidth="1"
+                         BorderRadius="8"
+                        Margin="0,0,0,20"
+                    Command="{Binding ContactsInfoCommand}"/>
+
+                <Button Style="{StaticResource boton}" Text="Mis Encuestas" 
+                    HeightRequest="50"
+                        ImageSource="misencuestas"
+                    VerticalOptions="Center" 
+                         BorderWidth="1"
+                         BorderRadius="8"
+                        Margin="0,0,0,20"
+                        Command="{Binding ReportsInfoCommand}"/>
+
+                <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                </Label>
+                <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

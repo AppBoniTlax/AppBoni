@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.ContactDetailInfoPage" 
+       BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding EditEmergencyContact}">
+            <StackLayout
+                Padding="20">
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Margin="0,0,0,20">
+                    <Image Source="colaboradores" WidthRequest="50"></Image>
+
+
+                    <Label  VerticalOptions="Center"
+                        >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource titulo}" Text="Mis Contactos" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Nombre Completo *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="{Binding EmergencyContact.FirstName}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Apellido Paterno *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="{Binding EmergencyContact.LastName}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="Apellido Materno *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="{Binding EmergencyContact.SecondLastName}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Teléfono *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Keyboard="Telephone"
+                        Text="{Binding EmergencyContact.Telephone}">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Parentesco *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        ItemDisplayBinding="{Binding Description}"
+                        SelectedItem="{Binding Relation}"
+                        ItemsSource="{Binding Relations}"
+                        Title="Seleccione el Parentesco">
+                    </Picker>
+
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="10"
+                        Text="Dirección"
+                        VerticalOptions="Center">
+                    </Label>
+                
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="11"
+                        Text="{Binding EmergencyContact.Address}">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+
+               
+                    <Button
+                        BackgroundColor="{StaticResource MainColor}"
+                        BorderRadius="0"
+                        Command="{Binding SaveCommand}"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled}"
+                        Text="Actualizar"
+                        TextColor="White">
+                    </Button>
+                    <Button
+                        BackgroundColor="Red"
+                        BorderRadius="0"
+                        Command="{Binding DeleteCommand}"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabledDelete}"
+                        Text="Eliminar"
+                        TextColor="White">
+                    </Button>
+
+                    <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                    </Label>
+                    <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                    </Label>
+               
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.CollaboratorsPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout
+            Padding="20">
+            <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                <Image Source="colaboradores.png" WidthRequest="50">
+
+                </Image>
+
+                <Label    VerticalOptions="CenterAndExpand" 
+                      HorizontalOptions="CenterAndExpand"
+                    >
+                    <Label.FormattedText>
+                        <FormattedString>
+                                <Span  Style="{StaticResource titulo}" Text="CON EL APOYO DE:" >
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+                
+            
+                <!--imagen 2-->
+
+                <Image WidthRequest="200"  Margin="0,50,0,0"  HorizontalOptions="Start"
+                   Source="colaboradores2"></Image>
+
+
+                <Label Margin="0,20,0,50">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Agencia de los Estados Unidos para el Desarrollo
+Internacional" />
+                            <Span Text="https://www.usaid.gov/mexico"
+                  TextColor="Blue"
+                  TextDecorations="None">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://www.usaid.gov/mexico" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <!--imagen 1-->
+
+                <Image WidthRequest="100" Margin="0,20,0,0"  HorizontalOptions="Start"
+                   Source="colaboradores1"></Image>
+
+
+
+                <Label Margin="0,20,0,50">
+    <Label.FormattedText>
+        <FormattedString>
+                        <Span Text="Programa de Naciones Unidas para el Desarrollo en
+México " />
+                        <Span Text="http://www.mx.undp.org/"
+                  TextColor="Blue"
+                  TextDecorations="none">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="http://www.mx.undp.org/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+    </Label.FormattedText>
+</Label>
+            
+           
+            
+
+
+
+            <!--imagen 3-->
+
+                <Image WidthRequest="200" Margin="0,20,0,0"  HorizontalOptions="Start"
+                   Source="colaboradores3"></Image>
+
+
+                <Label Margin="0,20,0,50">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Instituto Nacional de Transparencia, Acceso a la
+Información y Protección de Datos Personales" />
+                        <Span Text="http://inicio.ifai.org.mx/SitePages/ifai.aspx"
+                  TextColor="Blue"
+                  TextDecorations="None">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="http://inicio.ifai.org.mx/SitePages/ifai.aspx" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <!--imagen 4-->
+
+                <Image WidthRequest="200" Margin="0,20,0,0" HorizontalOptions="Start"
+                   Source="colaboradores4"></Image>
+
+
+                <Label Margin="0,20,0,50">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="GESOC Agencia para el Desarrollo, A.C." />
+                        <Span Text="http://www.gesoc.org.mx/"
+                  TextColor="Blue"
+                  TextDecorations="None">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="http://www.gesoc.org.mx/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <!--imagen 5-->
+
+                <Image WidthRequest="200" Margin="0,20,0,0"  HorizontalOptions="Start"
+                   Source="colaboradores5"></Image>
+
+
+                <Label Margin="0,20,0,50">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="https://gobiernofacil.com/"
+                  TextColor="Blue"
+                  TextDecorations="None">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://gobiernofacil.com/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <!--imagen 6-->
+
+            <Image WidthRequest="200" Margin="0,20,0,0"  HorizontalOptions="Start"
+                   Source="colaboradores6"></Image>
+
+
+                <Label Margin="0,20,0,50">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="ProSociedad Hacer bien el bien, A.C." />
+                        <Span Text="http://www.prosociedad.org/"
+                  TextColor="Blue"
+                  TextDecorations="None">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="http://www.prosociedad.org/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+            <!--imagen 7-->
+
+            <Image WidthRequest="200" Margin="0,20,0,0"  HorizontalOptions="Start"
+                   Source="colaboradores7"></Image>
+
+
+                <Label Margin="0,20,0,50">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="https://www.tlaxcala.gob.mx/"
+                  TextColor="Blue"
+                  TextDecorations="None">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://www.tlaxcala.gob.mx/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+
+                <Label Text="Autores de BONI" Style="{StaticResource subtitulo}" HorizontalOptions="Start"></Label>
+
+
+                <Label Text="Atenas Hernández Sánchez" Style="{StaticResource boni}" HorizontalOptions="Start"></Label>
+                <Label Text="Verónica Gallegos Gómez" Style="{StaticResource boni}" HorizontalOptions="Start"></Label>
+                <Label Text="Antonio Atempa Tuxpan" Style="{StaticResource boni}" HorizontalOptions="Start"></Label>
+                <Label Text="Julio Barranco Acosta" Style="{StaticResource boni}" HorizontalOptions="Start"></Label>
+
+                <Label Text="Agentes Locales de Cambio graduados del Programa de Formación en Gobierno Abierto y Desarrollo Sostenible" FontSize="13"  TextColor="#595959" HorizontalOptions="Center" Margin="0,20,0,0" TextDecorations="Underline" ></Label>
+
+                <Label Text="Programa avalado por  el PNUD México, INAI, ProSociedad, GESOC A.C. y Gobierno Fácil" FontSize="12"  TextColor="#989898" HorizontalOptions="Center" FontAttributes="Bold"   ></Label>
+                <Label Text="Gracias a la cooperación de la Agencia de los Estados Unidos para el Desarrollo Internacional" FontSize="12"  TextColor="#989898" HorizontalOptions="Center" FontAttributes="Bold"   ></Label>
+
+
+
+
+                <Label Style="{StaticResource subtituloo}" Text="Derechos Reservados © 2019" Margin="0,30,0,0"></Label>
+
+                <Label Style="{StaticResource subtitulooo}" Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)"></Label>
+
+                <Label  VerticalOptions="Start"
+                        >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span  Text="Todos los derechos están reservados. Ni esta publicación ni partes de ella pueden ser
+reproducidas, almacenadas mediante cualquier sistema o transmitidas, en cualquier
+forma o por cualquier medio, sea éste electrónico, mecánico, de fotocopiado, de
+grabado o de otro tipo, sin el permiso previo del Programa de las Naciones Unidas
+para el Desarrollo." >
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label  VerticalOptions="Start"
+                        >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span  Text="Esta aplicación digital fue posible 
+gracias al apoyo del pueblo de los Estados Unidos, a través de la Agencia de los 
+Estados Unidos para el Desarrollo Internacional (USAID). El contenido de esta aplicación digital es responsabilidad del proyecto &quot;Apoyando el cumplimiento de los Objetivos de Desarrollo Sostenible en 
+México por medio de prácticas de gobierno abierto, participación ciudadana y el fortalecimiento de la transparencia&quot; y no necesariamente refleja el punto de vista de 
+USAID o del gobierno de los Estados Unidos; ni del Programa de las Naciones Unidas para el Desarrollo, de su Junta Directiva, ni de sus Estados Miembros.
+" >
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label  VerticalOptions="Start"
+                        >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span  Text="El contenido de este material se produjo en coordinación con el Grupo de Trabajo
+(GT) del Proyecto, sin embargo, no refleja necesariamente las opiniones institucionales 
+de los integrantes del GT (PNUD, INAI, GESOC A.C., Gobierno Fácil, ProSociedad)." >
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,45,0,0">
+                
+            </Label>
+                <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                </Label>
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.AlertsPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Alertas">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding MyAlerts}"
+            Padding="8">
+            <ListView
+                IsRefreshing="{Binding IsRefreshing}"
+                HasUnevenRows="True"
+                ItemsSource="{Binding Alerts}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="0,20,0,20">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectAlertCommand}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <!--<Image
+                                    Grid.Column="0"
+                                    Source="logo"
+                                    WidthRequest="50">
+                                </Image>-->
+                                <StackLayout
+                                    Grid.Column="0"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        Text="Folio"
+                                         TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="Fecha"
+                                       TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="Hora"
+                                        TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="Tipo de Ataque"
+                                        TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                </StackLayout>
+                                <StackLayout
+                                    Grid.Column="2"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        Text="{Binding Id}"
+                                            TextColor="#595959"
+                                        FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding DateEmergency,  StringFormat='{0:dd-MM-yyyy}'}"
+                                           TextColor="#595959"
+                                        FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding TimeString}"
+                                            TextColor="#595959"
+                                        FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding AttackType}"
+                                           TextColor="#595959"
+                                        FontSize="12">
+                                    </Label>
+                                </StackLayout>
+                                 
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>            
+            </ListView>
+            <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+            </Label>
+            <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

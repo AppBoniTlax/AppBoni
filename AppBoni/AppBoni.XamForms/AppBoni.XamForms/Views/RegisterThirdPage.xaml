@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.RegisterThirdPage"   
+        BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Register}">
+            <StackLayout
+                Padding="20">
+
+                <Image
+               WidthRequest="90"
+               Margin="0,0,0,30"
+                 Source="logo">
+                </Image>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="medico.png" WidthRequest="50"></Image>
+                    <Label  VerticalOptions="Center"
+                         >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource titulo}" Text="DATOS MÉDICOS" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Tipo de Sangre *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        ItemDisplayBinding="{Binding Description}"
+                        SelectedItem="{Binding BloodType}"
+                        ItemsSource="{Binding BloodTypes}"
+                        Title="Seleccione el Tipo de Sangre">
+                    </Picker>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Estatura *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Keyboard="Numeric"
+                        Text="{Binding Height}"
+                        MaxLength="5">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="Peso *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Keyboard="Numeric"
+                        Text="{Binding Weight}"
+                        MaxLength="5">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Edad *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Keyboard="Numeric"
+                        Text="{Binding Age}"
+                        MaxLength="3">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Alergias *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Text="{Binding Allergies}">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderRadius="0"
+                    Command="{Binding RegisterPageThreeCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="Siguiente"
+                    TextColor="White">
+                </Button>
+                <Label Text="* Estos campos son obligatorios.
+Su código de validación llegará a su número telefónico." VerticalOptions="Start"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

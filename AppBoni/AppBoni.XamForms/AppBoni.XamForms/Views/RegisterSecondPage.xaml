@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="AppBoni.XamForms.Views.RegisterSecondPage"
+             Title="Datos de Domicilio">
+   <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Register}">
+            <StackLayout
+                Padding="20">
+
+
+                <!--Imagen-->
+                <Image
+               WidthRequest="90"
+               Margin="0,0,0,30"
+                 Source="logo">
+                </Image>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="domicilio.png" WidthRequest="50"></Image>
+                    <Label  VerticalOptions="Center" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource titulo}" Text="DATOS DE DOMICILIO" >
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Calle *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="{Binding StreetName}"
+                        MaxLength="40">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Núm Exterior *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="{Binding NumberExt}"
+                        MaxLength="10">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="Núm Interior"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="{Binding NumberInt}"
+                        MaxLength="10">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Colonia *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text="{Binding ColonyName}"
+                        MaxLength="25">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text="Código Postal *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Text="{Binding Cp}"
+                        Keyboard="Numeric"
+                        MaxLength="6">
+                    </Entry>
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="10"
+                        Text="Municipio / Localidad *"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker
+                        Grid.Column="0"
+                        Grid.Row="11"
+                        ItemDisplayBinding="{Binding Municipio}"
+                        SelectedItem="{Binding Municipality}"
+                        ItemsSource="{Binding Municipalities}"
+                        Title="Seleccione su Municipio">
+                    </Picker>
+
+                    <Label
+                        Style="{StaticResource parrafo}"
+                        Grid.Column="0"
+                        Grid.Row="12"
+                        Text="Estado"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Column="0"
+                        Grid.Row="13"
+                        Text="{Binding StateName}"
+                        IsReadOnly="True">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                    VerticalOptions="CenterAndExpand">
+                </ActivityIndicator>
+                <Button
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderRadius="0"
+                    Command="{Binding RegisterPageTwoCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="Siguiente"
+                    TextColor="White">
+                </Button>
+
+                <Label Text="* Estos campos son obligatorios.
+Su código de validación llegará a su número telefónico." VerticalOptions="Start"></Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

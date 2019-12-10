@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.InstitutionsDirectoryPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ListView ItemsSource="{Binding InstitutionsDirectory}"
+              HasUnevenRows="True">
+        <ListView.Header>
+            <StackLayout Padding="10,5,0,5" BackgroundColor="#cccccc">
+                <Label Text="Unidades de Atención a la Violencia PAIMEF" 
+                       VerticalOptions="Center"/>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+           <DataTemplate>
+               <ViewCell>
+                   <Grid Padding="8">
+                       
+                       <Grid.ColumnDefinitions>
+                           <ColumnDefinition Width="*"></ColumnDefinition>
+                           <ColumnDefinition Width="*"></ColumnDefinition>
+                       </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="{Binding Name}"    TextColor="#F15A24"
+                                         FontSize="11"/>
+                        <Label  Grid.Column="1" Text="{Binding Title}"      TextColor="#595959"
+                                        FontSize="11"/>
+                   </Grid>
+               </ViewCell>
+           </DataTemplate>
+       </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

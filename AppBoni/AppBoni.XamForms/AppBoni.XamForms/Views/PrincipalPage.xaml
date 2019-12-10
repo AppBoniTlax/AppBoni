@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.PrincipalPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView  BindingContext="{Binding Principal}">
+            <StackLayout Padding="20">
+
+                <Image WidthRequest="100"  VerticalOptions="Start"
+                       Source="logo" Margin="0,0,0,40"></Image>
+
+                <Button Text="Ubicación" 
+                    HeightRequest="50"
+                    VerticalOptions="Center" 
+                    BackgroundColor="{StaticResource MainColor}"
+                    Command="{Binding LocationCommand}"
+                    TextColor="White" 
+                    IsVisible="False"/>
+
+                <Button Style="{StaticResource boton}" Text="Número de Emergencia" 
+                    HeightRequest="46"
+                    VerticalOptions="Center" 
+                        BorderWidth="1"
+                         BorderRadius="8"
+                        Margin="0,0,0,20"
+                        ImageSource="emergencia"
+                    Command="{Binding SelectPhoneCommand}"
+                   />
+              
+                <Button 
+                    HeightRequest="219"
+                        ImageSource="botonpa"
+                    VerticalOptions="Center" 
+                    BackgroundColor="#fff"
+                    Command="{Binding EmergencyAlertCommand}"
+                    TextColor="White"/>
+
+                <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                </Label>
+                <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                </Label>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

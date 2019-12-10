@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login">
+    <ContentPage.Content>
+        <ScrollView BindingContext="{Binding Login}">
+            <StackLayout Padding="20">
+                <!--Imagen-->
+                <Image
+                    
+                    Margin="0,10,0,0"
+                    WidthRequest="200"
+                    Source="boni_naranja">
+                </Image>
+
+                <ActivityIndicator IsRunning="{Binding IsRunning}" 
+                                   VerticalOptions="CenterAndExpand"   >
+                </ActivityIndicator>
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="Recurso52.png" WidthRequest="20">
+
+                    </Image>
+
+                    <Label Text="Número de celular"
+                       FontSize="15"
+                       TextColor="#595959">
+
+                    </Label>
+
+                </StackLayout>
+
+                <Entry Text="{Binding NoCelular, Mode=TwoWay}"
+                       Keyboard="Telephone"
+                       x:Name="EntryTelephone"></Entry>
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="Recurso48.png" WidthRequest="20"></Image>
+                    <Label Text="Contraseña"
+                       FontSize="15"
+                       TextColor="#595959"
+                       FontFamily="bold">
+                    </Label>
+                </StackLayout>
+
+                <Entry Text="{Binding Password}"
+                      IsPassword="True"
+                       x:Name="EntryPass"></Entry>
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Recordarme en este Dispositivo"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        IsToggled="{Binding IsRemember}">
+                    </Switch>
+                </StackLayout>
+
+                <!--<StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Recordarme en este Dispositivo"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        IsToggled="{Binding IsRemember}">
+                    </Switch>
+                </StackLayout>-->
+
+
+
+                <Button BackgroundColor="#595959" BorderRadius="0"
+                       
+                        IsEnabled="{Binding IsEnabled}"
+                        Text="Acceder" TextColor="White" Command="{Binding LoginCommand}">
+                </Button>
+
+                <StackLayout  HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Image Source="Recurso49.png" WidthRequest="20"></Image>
+
+                    <Label  IsEnabled="{Binding IsEnabled}" >
+                        <Label.FormattedText>
+                            <FormattedString>
+
+                                <Span Style="{StaticResource parrafo}" Text="Registrarme">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding RegisterUserCommand}"
+                                                           />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+
+                </StackLayout>
+
+
+                <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal">
+
+                    <Image Source="Recurso64.png" WidthRequest="20"></Image>
+                    <Label >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource parrafo}" Text="Recuperar Datos"
+                                  
+                               >
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding RecoveryDataCommand}"
+                                                          CommandParameter="{Binding NoCelular}" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </StackLayout>
+
+                <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                </Label>
+                <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+                </Label>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

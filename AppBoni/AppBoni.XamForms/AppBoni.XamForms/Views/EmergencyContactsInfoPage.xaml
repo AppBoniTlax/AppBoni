@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBoni.XamForms.Views.EmergencyContactsInfoPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Contactos">
+    <ContentPage.ToolbarItems>
+ <ToolbarItem IsEnabled="{Binding IsEnableAddContact}" Icon="contacto.png" Command="{Binding AddContactCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding MyEmergencyContacts}"
+            Padding="20">
+            <StackLayout HorizontalOptions="Start"
+                    Orientation="Horizontal" Margin="0,0,0,20">
+                <Image Source="colaboradores" WidthRequest="50"></Image>
+
+
+                <Label  VerticalOptions="Center"
+                        >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Style="{StaticResource titulo}" Text="Mis Contactos" >
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <ListView
+                IsRefreshing="{Binding IsRefreshing}"
+                HasUnevenRows="True"
+                ItemsSource="{Binding Contacts}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="0,20,0,20">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectContactCommand}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <!--<Image
+                                    Grid.Column="0"
+                                    Source="logo"
+                                    WidthRequest="10">
+                                </Image>-->
+                                <StackLayout
+                                    Grid.Column="0"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        Text="Nombre"
+                                        TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="Apellido Paterno"
+                                        TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="Apellido Materno"
+                                        TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="Tel."
+                                        TextColor="#F15A24"
+                                         FontSize="12">
+                                    </Label>
+                                </StackLayout>
+                                
+                                
+                                <StackLayout
+                                    Grid.Column="2"
+                                    VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        Text="{Binding FirstName}"
+                                        TextColor="#595959"
+                                        FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding LastName}"
+                                        TextColor="#595959"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding SecondLastName}"
+                                        TextColor="#595959"
+                                         FontSize="12">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding Telephone}"
+                                        TextColor="#595959"
+                                         FontSize="12">
+                                    </Label>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Derechos Reservados © 2019" FontSize="15" FontAttributes="Bold" TextColor="#989898" HorizontalOptions="Center" Margin="0,20,0,0">
+
+            </Label>
+            <Label Text="Programa de las Naciones Unidas para el Desarrollo (PNUD)" FontSize="10"  TextColor="#989898" HorizontalOptions="Center" >
+
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
